@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internships</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            opacity: 0.8; /* Add this line to set the initial opacity */
+            filter: alpha(opacity=80); /* For Internet Explorer */
+        }
+
+        a:hover {
+            background-color: #3e8e41;
+            opacity: 1; /* Add this line to set the hover opacity */
+            filter: alpha(opacity=100); /* For Internet Explorer */
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .web-development, .app-development, .python-programming, .java-programming {
+            background-color: #f5f5f5;
+            padding: 2rem;
+            border-radius: 4px;
+            margin-top: 2rem;
+        }
+
+        .web-development h2, .app-development h2, .python-programming h2, .java-programming h2 {
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .web-development p, .app-development p, .python-programming p, .java-programming p {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .web-development a, .app-development a, .python-programming a, .java-programming a {
+            background-color: #2200ffc1;
+            margin-top: 2rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Join Our Internship Program</h1>
+    <p>Learn, grow, and contribute to real-world projects as a valued member of our team.</p>
+    <div class="web-development">
+        <h2>Web Development Program</h2>
+        <p>Collaborate with our web development team to design, build, and maintain responsive websites and web applications.</p>
+        <div class="grid">
+            <div class="card">
+                <img src="https://source.unsplash.com/random/300x200/?web-development" alt="Web Development">
+                <h2>Front-End Internship</h2>
+                <p>Learn HTML, CSS, JavaScript, and modern front-end frameworks like React and Angular.</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/random/300x200/?web-development" alt="Web Development">
+                <h2>Back-End Internship</h2>
+                <p>Learn server-side programming languages like Python, Ruby, and Node.js, and work with databases and APIs.</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/random/300x200/?web-development" alt="Web Development">
+                <h2>Full-Stack Internship</h2>
+                <p>Learn both front-end and back-end development, and work on end-to-end web development projects.</p>
+                <a href="#">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="app-development">
+        <h2>App Development Internship Program</h2>
+        <p>Collaborate with our app development team to design, build, and maintain mobile and web applications.</p>
+        <div class="grid">
+            <div class="card">
+                <img src="https://source.unsplash.com/random/300x200/?app-development" alt="App Development">
+                <h2>iOS Internship</h2>
+                <p>Learn Swift and Objective-C, and work on iOS app development projects using Xcode and SwiftUI.</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/random/300x200/?app-development" alt="App Development">
+                <h2>Android Internship</h2>
+                <p>Learn Java and Kotlin, and work on Android app development projects using Android Studio and Jetpack.</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/random/300x200/?app-development" alt="App Development">
+                <h2>Cross-Platform Internship</h2>
+                <p>Learn React Native, Flutter, or Xamarin, and work on cross-platform app development projects using a single codebase.</p>
+                <a href="#">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="python-programming">
+        <h2>Python Programming Internship Program</h2>
+        <p>Collaborate with our data science and machine learning teams to design, build, and maintain Python-based data solutions.</p>
+        <div class="grid">
+            <div class="card">
+                <img src="https://source.unsplash.com/random/300x200/?python-programming" alt="Python Programming">
+                <h2>Data Science Internship</h2>
+                <p>Learn Python,NumPy, Pandas, Matplotlib, and Scikit-Learn, and work on data science projects using real-world datasets.</p>
+                <a href="#">Apply Now</a></div>
+            <div class="card">
+                <img src="https://source.unsplash.com/random/300x200/?python-programming" alt="Python Programming">
+                <h2>Machine Learning Internship</h2>
+                <p>Learn Python, TensorFlow, Keras, and PyTorch, and work on machine learning projects using deep learning and neural networks.</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/random/300x200/?python-programming" alt="Python Programming">
+                <h2>Data Engineering Internship</h2>
+                <p>Learn Python, Apache Airflow, Apache Kafka, and Apache Spark, and work on data engineering projects using big data and distributed computing.</p>
+                <a href="#">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="java-programming">
+        <h2>Java Programming Internship Program</h2>
+        <p>Collaborate with our software engineering team to design, build, and maintain Java-based software solutions.</p>
+        <div class="grid">
+            <div class="card">
+                <img src="https://source.unsplash.com/random/300x200/?java-programming" alt="Java Programming">
+                <h2>Software Engineering Internship</h2>
+                <p>Learn Java, Spring, Hibernate, and JUnit, and work on software engineering projects using object-oriented programming and design patterns.</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/random/300x200/?java-programming" alt="Java Programming">
+                <h2>Web Development Internship</h2>
+                <p>Learn Java, Spring Boot, Thymeleaf, and JSP, and work on web development projects using the Java EE platform and the Model-View-Controller (MVC) architecture.</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/random/300x200/?java-programming" alt="Java Programming">
+                <h2>Mobile Development Internship</h2>
+                <p>Learn Java, Android Studio, and the Android SDK, and work on mobile development projects using the Android operating system and the Java programming language.</p>
+                <a href="#">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
