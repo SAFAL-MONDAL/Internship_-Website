@@ -1,0 +1,472 @@
+/* Dashboard Container */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .dashboard-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  /* Header */
+  .dashboard header {
+    margin-bottom: 3rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #5170fa 0%, #a75af3 100%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .dashboard header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .dashboard header p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 0;
+    opacity: 0.9;
+    color: white;
+  }
+  
+  /* Header decorative elements */
+  .header-circle-1 {
+    position: absolute;
+    top: -25px;
+    right: -20px;
+    width: 160px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+  }
+  
+  .header-circle-2 {
+    position: absolute;
+    bottom: -25px;
+    left: -25px;
+    width: 160px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+  }
+  
+  /* Internship Sections */
+  .internship-section {
+    margin-bottom: 3rem;
+  }
+  
+  .internship-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    position: relative;
+  }
+  
+  .internship-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+  }
+  
+  .internship-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Internship Cards */
+  .internship-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 15px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .internship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+  
+  .category-badge {
+    background: #f0e7ff;
+    color: #7c3aff;
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .arrow-icon {
+    color: #a0aec0;
+  }
+  
+  .internship-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .internship-card p {
+    color: #555;
+    margin-bottom: 1.8rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+  
+  .apply-btn, .resources-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .apply-btn {
+    background: #7c3aff;
+    color: white;
+    border: none;
+  }
+  
+  .apply-btn:hover {
+    background: #6a30d9;
+    transform: translateY(-2px);
+  }
+  
+  .resources-btn {
+    background: #f7fafc;
+    color: #2d3748;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .resources-btn:hover {
+    background: #edf2f7;
+    transform: translateY(-2px);
+  }
+  
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+    backdrop-filter: blur(3px);
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 550px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: #f7fafc;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #4a5568;
+    transition: all 0.2s ease;
+  }
+  
+  .close-btn:hover {
+    background: #edf2f7;
+    color: #2d3748;
+    transform: rotate(90deg);
+  }
+  
+  .modal-header {
+    margin-bottom: 2rem;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  
+  .modal-header .badge {
+    background: #f0e7ff;
+    color: #7c3aff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .modal-header .description {
+    color: #718096;
+    margin-top: 0.8rem;
+    line-height: 1.6;
+  }
+  
+  /* Form Styles */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #7c3aff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(124, 58, 255, 0.1);
+  }
+  
+  .form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1.2rem;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+  
+  .file-upload {
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  
+  .file-upload:hover {
+    border-color: #7c3aff;
+    background: #f9f7ff;
+  }
+  
+  .file-upload label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .file-upload label span {
+    background: #f0e7ff;
+    color: #7c3aff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .file-upload input[type="file"] {
+    display: none;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background: #7c3aff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background: #6a30d9;
+    transform: translateY(-2px);
+  }
+  
+  /* Resources Modal */
+  .resources-modal {
+    max-width: 800px;
+  }
+  
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .resource-card {
+    background: #f7fafc;
+    border-radius: 10px;
+    padding: 1.8rem 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #2d3748;
+    text-decoration: none;
+    border: 1px solid transparent;
+  }
+  
+  .resource-card:hover {
+    transform: translateY(-5px);
+    background: #f0e7ff;
+    border-color: #e9d8fd;
+  }
+  
+  .resource-icon {
+    background: #f0e7ff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+    color: #7c3aff;
+    transition: all 0.3s ease;
+  }
+  
+  .resource-card:hover .resource-icon {
+    background: #7c3aff;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  .resource-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .close-resources {
+    width: 100%;
+    padding: 0.9rem;
+    background: #f7fafc;
+    color: #2d3748;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .close-resources:hover {
+    background: #edf2f7;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard header h1 {
+      font-size: 2rem;
+    }
+    
+    .dashboard header p {
+      font-size: 1.1rem;
+    }
+    
+    .internship-section h2 {
+      font-size: 1.8rem;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .resources-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard header {
+      padding: 2rem 1rem;
+    }
+    
+    .dashboard header h1 {
+      font-size: 1.8rem;
+    }
+    
+    .dashboard header p {
+      font-size: 1rem;
+    }
+    
+    .internship-card {
+      padding: 1.5rem;
+    }
+    
+    .resources-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+      padding: 1.5rem;
+    }
+  }
